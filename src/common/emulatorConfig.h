@@ -70,6 +70,7 @@ struct ConfigOptions {
 	bool                   pro_enabled                 = false;
 	bool                   amd_cpu_enabled             = false;
 	bool                   network_connected           = false;
+	bool                   psn_emulation_enabled       = false;
 	uint32_t               vblank_frequency            = 60;
 	uint32_t               console_language            = DEFAULT_CONSOLE_LANGUAGE;
 	bool                   vulkan_validation_enabled   = false;
@@ -132,6 +133,7 @@ bool     VrEnabled();
 bool     Ps5ProEnabled();
 bool     AmdCpuEnabled();
 bool     IsNetworkConnected();
+bool     PsnEmulationEnabled();
 uint32_t GetVblankFrequency();
 uint32_t GetConsoleLanguage();
 bool     VulkanValidationEnabled();
