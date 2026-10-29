@@ -74,6 +74,8 @@ static void PrintUsage() {
 	    "  --stretch                            Stretch the image to the window. Default: off.\n");
 	::printf("  --no-splash                          Disable the startup splash screen.\n");
 	::printf("  --vr                                 Enable the virtual VR headset.\n");
+	::printf("  --trinity                            Enable experimental PS5 Pro mode for supported titles\n"
+	         "                                       (PSSR uses linear scaling). Default: off.\n");
 	::printf("  --amd-cpu                            Apply AMD CPU instruction patches.\n");
 	::printf("  --vblank-frequency <num>             Virtual vblank frequency. Default: 60.\n");
 	::printf("  --console-language <0-29>            Console language. Default: 1 (English US).\n");
@@ -204,6 +206,7 @@ static constexpr Flag FLAGS[] = {
     {"--stretch", &ConfigOptions::stretch_enabled},
     {"--no-splash", &ConfigOptions::splash_enabled, false},
     {"--vr", &ConfigOptions::vr_enabled},
+    {"--trinity", &ConfigOptions::pro_enabled},
     {"--amd-cpu", &ConfigOptions::amd_cpu_enabled},
     {"--network-connected", &ConfigOptions::network_connected},
     {"--vulkan-validation", &ConfigOptions::vulkan_validation_enabled},
